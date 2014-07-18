@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ page.title }}</title>
+        <title>{% if page.title %}{{ page.title }} - {% endif %}S2fDocumentation</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
         <ul>
           {% for post in site.posts %}
             <li>
-              <a href="{{ post.url }}">{{ post.title }}</a>
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             </li>
           {% endfor %}
         </ul>
