@@ -1,6 +1,6 @@
 ---
 layout: pages
-title: Los gehts
+title: Los gehts - Projektsetup
 ---
 
 Los gehts - Projektsetup
