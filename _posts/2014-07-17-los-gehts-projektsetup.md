@@ -1,20 +1,17 @@
 ---
 layout: pages
-title: Los gehts - Projektsetup
+title: Los geht's - Projektsetup
 ---
 
-Los gehts - Projektsetup
-========================
+# Los geht's - Projektsetup
 
-Installation via Composer:
---------------------------
+##Installation via Composer:
 
 ```
 $ php composer.phar create-project symfony/framework-standard-edition PfadZumProjekt/ "2.5.*"
 ```
 
-Bundle erstellen
-----------------
+##Bundle erstellen
 
 Aufbau: Namespacename/BundlenameBundle
 
@@ -22,8 +19,8 @@ Aufbau: Namespacename/BundlenameBundle
 $ php app/console generate:bundle --namespace=Namespacename/BundlenameBundle
 ```
 
-Erste Route erstellen
----------------------
+## Route erstellen
+
 Dieser Eintrag zeigt der App wo die Routendatei des Bundles liegt.
 Hier werden dann die Routeninformationen für das Bundle hinterlegt (Namespacename/Bundlename/Resources/config/routing.php).
 Die Route verweist auf den entsprechenden Controller nach dem Schema: NamespacenameBundlenameBundle:%Controllername%:%routenname%
@@ -35,8 +32,8 @@ $collection->add('namespacename_bundlename_homepage', new Route('/hello/{name}',
 )));
 ```
 
-Controller erstellen
---------------------
+##Controller erstellen
+
 Der Controller wird unter Namespace/Bundlename/Controller/%Controllername%Controller.php angelegt.
 Er mappt die Route entsprechend dem in den Routeninformationen angegebenen Schema: %routenname%Action
 Standardmäßig wird der entsprechende View zurückgegeben, hier mit der aus der Route übergebenen Variable "name".
@@ -48,8 +45,7 @@ public function indexAction($name)
 }
 ```
 
-View anpassen
--------------
+##View anpassen
 
 Der View liegt unter Namespacename/Bundlename/Resources/config/views/%Controllername%/%routenname%.html.twig.
 Aus dem Controller übergebene Variablen werden über doppelt-geschweifte Klammern im View ausgegenem (hier: {{ name }}).
@@ -58,10 +54,18 @@ Aus dem Controller übergebene Variablen werden über doppelt-geschweifte Klamme
 Hello {{ name }}
 ```
 
-Functional Testing
-------------------
+##Testing
 
-Die Test Cases liegen in Namespacename/Bundlename/Tests, für den Controller demnach in Namespacename/Bundlename/Tests/Controller/%Controllername%ControllerTest.php.
+###Unit Testing
+
+Die Test Cases für dir Unittests liegen im Regelfall in Namespacename/Bundlename/Tests/%Meinverzeichnis%/%Klassenname%Test.php.
+
+###Functional Testing
+
+Die Test Cases für dir Funktionstests liegen im Regelfall in Namespacename/Bundlename/Tests/Controler/%Controllername%ControllerTest.php.
+
+#Tests durchführen
+
 Für einen Gesamttest genügt folgenden Aufruf:
 
 ```
