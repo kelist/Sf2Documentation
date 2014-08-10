@@ -26,11 +26,11 @@ Hier werden dann die Routeninformationen für das Bundle hinterlegt (Namespacena
 Die Route verweist auf den entsprechenden Controller nach dem Schema: NamespacenameBundlenameBundle:%Controllername%:%routenname%
 In geschweiften Klammern werden evtl. vorhandene Variablen der Route übergeben (hier: {name}).
 
-```
+{% highlight php %}
 $collection->add('namespacename_bundlename_homepage', new Route('/hello/{name}', array(
     '_controller' => 'NamespacenameBundlenameBundle:Default:index',
 )));
-```
+{% endhighlight %}
 
 ##Controller erstellen
 
