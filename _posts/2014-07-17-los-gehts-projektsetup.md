@@ -50,7 +50,7 @@ public function indexAction($name)
 Der View liegt unter Namespacename/Bundlename/Resources/config/views/%Controllername%/%routenname%.html.twig.
 Aus dem Controller übergebene Variablen werden über doppelt-geschweifte Klammern im View ausgegenem (hier: {{ name }}).
 
-{% highlight php %}
+{% highlight smarty %}
 Hello {{ name }}
 {% endhighlight %}
 
