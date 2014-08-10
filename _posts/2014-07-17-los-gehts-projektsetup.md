@@ -64,7 +64,7 @@ Die Test Cases für dir Unittests liegen im Regelfall in Namespacename/Bundlenam
 
 Die Test Cases für dir Funktionstests liegen im Regelfall in Namespacename/Bundlename/Tests/Controler/%Controllername%ControllerTest.php.
 
-#Tests durchführen
+###Tests durchführen
 
 Für einen Gesamttest genügt folgenden Aufruf:
 
