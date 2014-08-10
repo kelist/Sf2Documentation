@@ -5,6 +5,6 @@ title: Startseite
 
 {% for post in site.posts reversed %}
     <div id="{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">
-    {{ post.content }}
+        {{ post.content }}
     </div>
 {% endfor %}
