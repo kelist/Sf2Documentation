@@ -58,8 +58,8 @@ Aus dem Controller übergebene Variablen werden über doppelt-geschweifte Klamme
 Hello {{ name }}
 ```
 
-Unit Testing
-------------
+Functional Testing
+------------------
 
 Die Test Cases liegen in Namespacename/Bundlename/Tests, für den Controller demnach in Namespacename/Bundlename/Tests/Controller/%Controllername%ControllerTest.php.
 Für einen Gesamttest genügt folgenden Aufruf:
