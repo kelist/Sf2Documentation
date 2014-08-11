@@ -5,7 +5,7 @@ title: Los geht's - Projektsetup
 
 # Los geht's - Projektsetup
 
-##Installation via Composer:
+##Installation von Symfony via Composer:
 
 {% highlight console %}
 $ php composer.phar create-project symfony/framework-standard-edition PfadZumProjekt/ "2.5.*"
@@ -41,7 +41,7 @@ Standardmäßig wird der entsprechende View zurückgegeben, hier mit der aus der
 {% highlight php %}
 public function indexAction($name)
 {
-    return $this->render('BikerentCoreBundle:Default:index.html.twig', array('name' => $name));
+    return $this->render('NamespacenameBundlenameBundle:Default:index.html.twig', array('name' => $name));
 }
 {% endhighlight %}
 
@@ -51,7 +51,7 @@ Der View liegt unter Namespacename/Bundlename/Resources/config/views/%Controller
 Aus dem Controller übergebene Variablen werden über doppelt-geschweifte Klammern im View ausgegenem (hier: "name").
 
 {% highlight smarty %}
-Hello {{ name }}
+Hello /*{{/* name /*}}/*
 {% endhighlight %}
 
 ##Testing
